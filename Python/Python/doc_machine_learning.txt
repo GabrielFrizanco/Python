@@ -1,0 +1,323 @@
+Listas (I)
+Lista
+
+Para criar uma lista:
+
+minhaLista1 = []       #cria lista vazia
+
+minhaLista2 = list()   #cria uma lista vazia
+
+       minhaLista3 = list(  range(5)  ) # cria uma lista vazia com 5 elementos
+
+minhaLista4 = [0,1,2,3,4]  # cria uma lista com os elementos 0, 1, 2, 3, 4
+
+Para exibir o conteúdo de uma lista:
+
+print( nome_da_lista)
+
+exemplo:
+print( minhalista1 )
+
+Para exibir o tipo de uma lista
+
+type(nome_da_lista) #retorna o tipo da lista
+
+Exemplo:
+print(  type(minhaLista) )   # informa o tipo da lista
+
+Adicionar elementos no final da lista
+
+minhaLista.append(100)  # adiciona elementos no final da lista
+
+Exemplo:
+minhaLista.append(100)  # adiciona o elemento 100 no final da lista
+
+print ( minhaLista1 )
+
+Alterar um item específico
+
+minhaLista1[1] = 101
+
+print ( minhaLista1 )
+
+Insere um elemento na lista
+
+minhaLista.insert(0,300)  # na posição 0 adiciona 300
+
+print ( minhaLista )
+
+
+minhaLista.insert(4,400)  # na posição 0 adiciona 300
+print (minhaLista)
+
+Inverter a lista
+
+minhaLista.reverse()
+
+print ( minhaLista )
+
+Ordenar um lista
+
+minhaLista.sort()
+
+print ( minhaLista )
+
+Contar quantos elementos existem na lista
+
+minhaLista.count(100)
+
+#mostra a primeiro ocorrência do item 4
+minhaLista.index(300)
+# irá mostrar 6, pois o valor 300 está na 6 posição
+
+minhaLista2 = list(range(10))
+print(minhaLista2)
+print(minhaLista2[2:7]) # exibe os elemento do intervalor 2 até 7
+
+
+print(minhaLista2[2:7:2]) #último elemento indica que vai pular de dois em dois
+#Transforma um texto e lista de palavras, e pegar somente as palavras do meio.
+
+minhaLista3 = ['Everson','Luciana', 'Henrique', 'Julia']
+minhaLista3.sort()
+print(minhaLista3)
+
+Listas (II)
+Copiando e fatiando Listas
+
+Exemplo:
+
+lista = [1, 2, 3, 4, 5]
+v = lista
+print (lista)
+** Resultado:  [1, 2, 3, 4, 5]
+
+print(v)
+** Resultado:  [1, 2, 3, 4, 5]
+
+v[0] = 100
+print(v)
+Resultado: [100, 2, 3, 4, 5]
+
+print(lista)
+Resultado: [1, 2, 3, 4, 5]
+
+Exercícios (19.09)
+Exercício 1
+
+1. Crie uma lista para armazenar os nomes das disciplinas do semestre que está cursando.
+2. Exiba o nome de cada disciplina acessando cada elemento da lista, um de cada vez.
+3. Exiba o nome da disciplina e uma mensagem padrão
+4. Crie uma lista para armazenar os diversos meios de transporte.
+
+
+Exercício 2
+
+1. Crie uma lista de convidados para um jantar
+2. Utilize a lista para exibir uma mensagem convidando a pessoa para jantar
+3. Duas pessoas não poderão comparecer ao jantar, portanto, será necessário enviar outro convite. Substitua essas duas pessoas na lista.
+4. Acrescente uma instrução print para informar às pessoas que encontrou uma mesa de jantar maior.
+5. Acrescente um novo convidado no início de sua lista
+6. Adicione um novo convidado no final de sua lista
+7. Adicione um convidado no meio da lista
+8. Exiba o nome de todos os convidados
+8. Ordene a lista e exiba o nome de todos os convidados
+9. Exiba a lista na ordem inversa
+10. Exiba a quantidade de convidados
+
+
+Percorrendo os itens da lista
+disciplinas = ["Algoritmos", "Linguagem de Programação", "Estrutura de dados", "Banco de Dados", "Engenharia de Software", "Redes de Computadores"]
+for item in disciplinas:
+  print(item)
+
+Tupla (26.09)
+Tupla
+
+- é uma coleção de elementos (como a lista)
+- a diferença entre as estruturas lista e tuplas e a propriedade de imutabilidade das tuplas
+- isso significa que uma vez definidos os seus elementos, a tupla não pode ser alterada (adicionar, editar, excluir)
+- cada elemento possui um índice associado (0 a n)
+
+Para criar uma tupla
+
+tupla_vazia = ()    #cria uma tupla vazia
+
+tupla_vazia2 = tuple()          #cria uma tupla vazia
+
+tupla1 = ( 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 )
+
+tupla2 = ( 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, "tupla", ( 1, 2, 3 ) )
+
+tupla3 = ( 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, "tupla", [ 1, 2, 3 ] )
+
+
+Para recuperar o tipo da tupla
+
+type(tupla_vazia)
+
+
+Para recuperar o tamanho da tupla
+len(tupla_vazia)
+
+
+Imutabilidade da Tupla
+
+- não é possível adicionar, editar ou excluir elementos da lista
+- é possível alterar a lista dentro da tupla.
+
+Principais métodos
+count - retorna a quantidade de ocorrências de um determinado item
+index - retorna a posição (índice) de um elemento
+len - retorna o tamanho da tupla
+max - retorna o maior elemento
+min - retorna o menor elemento
+sum - retorna a soma dos elementos
+
+Exemplos:
+notas = (8.0, 6.0, 8.0, 9.0, 6.5, 7.5)
+print( len( notas ) )
+
+print( max( notas ) )
+
+print( min( notas ) )
+
+print( sum( notas ) )
+
+len(tupla_vazia)
+
+notas.count(8.0)
+
+notas.index(6.5)
+
+
+Convertendo tuplas em listas
+
+Exemplos:
+lista = list(notas)
+print( lista )
+
+lista[0] = 8.8
+print( lista )
+
+print( notas )
+
+
+Convertendo Listas em Tuplas
+
+Exemplos:
+notas2 = tuple(lista)
+print( notas2 )
+
+Alterando um item da lista contido na tupla
+
+Exemplo:
+tupla3 = ( 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, "tupla", [ 10, 20, 30 ] )
+print( tupla3 )
+
+print( tupla3[11][2] )
+
+tupla3[11][2] = 100
+print( tupla3 )
+
+Dicionário
+Estrutura de Dados - Dicionário (também conhecido como mapa)
+
+- mesma ideia do dicionário convencional;
+- em um dicionário armazenamos uma informação (valor) que precisamos localizar e recuperar posteriormente através de uma chave;
+- o principal propósito de um dicionário é associar um valor (value) a uma chave (key)
+- um dicionário em Python é então uma coleção de pares de chave/valor
+- cada chave está associada a um valor, e através dessa chave acessamos o valor associado a ela
+
+Para criar um dicionário
+dic_vazio = {}
+dic_vazio2 = dict()
+
+dic_estados = { "SP": "São Paulo", "PR" : "Paraná", "MG" : "Minas Gerais" }
+dic_estados
+
+dic_produtos = {
+                    1 : "Caneta",
+                200 : "Pen Drive",
+                  30 : "Caderno",
+                    4 : "Mouse",
+                  12 : "Teclado"
+ }
+print( dic_produtos )
+
+
+dic_notas_alunos = {
+      "Carlos"  : [6.0, 4.0, 8.0],
+      "Marcio"  : [8.0, 9.0, 6.0], 
+      "Antonio" : [5.5, 7.0, 9.0]
+}
+print( dic_notas_alunos )
+
+dic_notas_alunos2 = {
+      "Carlos"    : {"nota1" : 6.0, "nota2" : 4.0, "nota3" : 8.0 },
+      "Marcio"   : {"nota1" : 8.0, "nota2" : 9.0, "nota3" : 6.0 }, 
+      "Antonio" : {"nota1" : 5.5, "nota2" : 7.0, "nota3" : 9.0 }
+}
+print( dic_notas_alunos2 )
+
+Acessando um valor no dicionário através da chave
+
+dic_estados["SP"] #acessa o elemento chave "SP"
+
+print( "Eu moro em " + dic_estados["MG"] + ".")
+
+nome_aluno = "Marcio"
+print("As notas de " + nome_aluno +  "foram: " + str( dic_notas_alunos[nome_aluno] ) + "." )
+print( nome_aluno + " tirou " + str(dic_notas_alunos[nome_aluno][0]) + " pontos na 1a prova" )
+
+
+Modificando valores
+
+dic_estados["MG"] = "MINAS GERAIS"
+print(dic_estados)
+
+dic_notas_alunos["Antonio"][1] = 8.9  #altera a segunda nota do Antonio
+print(dic_notas_alunos)
+
+dic_notas_alunos["Marcio"] = [ 5.1, 6.1, 7.1]
+print(dic_notas_alunos)
+
+dic_notas_alunos2["Marcio"]["nota3"] = 0.0
+print(dic_notas_alunos2)
+
+Principais Métodos
+clear - apaga todos os elementos
+copy - retorna uma cópia dos elementos do dicionário
+fromkeys - retorna um dicionário a partir de uma sequência de chaves
+get - retorna o valor associado a chave
+items - retorna uma visão dos pares chaves/valor de um dicionário
+keys - retorna uma visão das chaves do dicionário
+pop - remove e retorna o elemento associado a chave passada por valor (erro se não existir)
+popitem - remove e retorna o último elemento adicionado ao dicionário
+setdefault - retorna o valor associado a uma chave, caso não exista, insere a chave com o valor opcional no dicionário
+update - adiciona ao dicionário os pares de chave/valor de outro dicionário passado por parâmetro
+value - retorna uma visão dos valores de um dicionário
+
+Exemplos:
+dic_exemplo = {1 : "Um", 2 : "Dois", ... }
+dic_exemplo
+
+dic_exemplo2 = dic_exemplo.copy()
+dic_exemplo2
+
+dic_num_pares = dict.fromkeys( [ 2, 4, 6, 8, 10 ] )
+dic_num_pares
+
+dic_num_pares = dict.fromkeys( [ 2, 4, 6, 8, 10 ], "par" )
+dic_num_pares
+
+dic_num_pares_get(2)
+
+dic_num_pares.item()  #retorna chave / valor
+
+removido = dic_num_pares.popitem()  #remove o último par chave/valor adicionado ao dicionário removido
+
+dic_exemplo.pop(1) # remove par associado a chave 1
+dic.exemplo
+
+var = dia_exemplo.pop(2)
