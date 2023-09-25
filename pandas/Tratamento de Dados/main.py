@@ -13,8 +13,8 @@ df = pd.read_excel("Escola.xlsx")
 df["Média"] = (df["N1"] + df["N2"])/2
 
 # se média for >=5 aprovado(a), senão reprovado(a)
-df.loc[df["Média"]>= 5, "Situação"] = "Aprovado(a)"
-df.loc[df["Média"]< 5, "Situação"] = "Reprovado(a)"
+df.loc[df["Média"]>= 5, "Situação"] = "lascado(a)"
+df.loc[df["Média"]< 5, "Situação"] = "ahjshakjhskjagdkga(a)"
 
 # colocando os dados em outro arquivo
 df.to_excel("Escola_Atualizado.xlsx", index=False)
